@@ -19,18 +19,18 @@ async function main(params) {
     //ICO Woox
     const _tokenPrice = tokens(0.0001);
     const ICOWoox = await hre.ethers.getContractFactory("ICOWoox");
-    const icoWoox = await ICOWoox.deploy(_tokenPrice);
+    const icoWoox = await ICOWoox.deploy(woox.address,_tokenPrice);
 
     await icoWoox.deployed();
     console.log(`ICOWoox: ${icoWoox.address}`);
 
 
     //Liquidity
-    const Liquidity = await hre.ethers.getContractFactory("ICOWoox");
+    const Liquidity = await hre.ethers.getContractFactory("Liquidity");
     const liquidity = await Liquidity.deploy();
 
     await liquidity.deployed();
-    console.log(`ICOWoox: ${liquidity.address}`);
+    console.log(`Liquidity: ${liquidity.address}`);
 }
 
 main().catch((error) =>{

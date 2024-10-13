@@ -1,8 +1,8 @@
 require("@nomicfoundation/hardhat-toolbox");
 
 const NEXT_PUBLIC_POLYGON_MUMBAI_RPC =
-  "https://polygon-mumbai.g.alchemy.com/v2/0awa485pp03Dww2fTjrSCg7yHlZECw-K";
-const NEXT_PUBLIC_PRIVATE_KEY = "YOUR PRIVATE KEY";
+  "https://rpc.ankr.com/polygon_amoy";
+const NEXT_PUBLIC_PRIVATE_KEY = "189dcfe68a243a292aba83cf3a0ddee77122981521daac91e0eb83799646839f";
 /** @type import('hardhat/config').HardhatUserConfig */
 
 module.exports = {
@@ -16,3 +16,6 @@ module.exports = {
     },
   },
 };
+
+
+//npx hardhat run --network polygon_mumbai scripts/deploy.js
